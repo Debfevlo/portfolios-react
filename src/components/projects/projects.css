@@ -1,0 +1,38 @@
+#projects{
+    margin: 0 auto;
+    min-height: calc(100vh - 4rem);
+    width: 100vw;
+    max-width: 60rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+
+}
+
+.projectTitle{
+    margin: 1rem 0;
+    font-size: 3rem;
+}
+
+.projectDescription{
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.projectImgs{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 65rem;
+    width: 100vw;
+}
+
+.projectImg{
+    object-fit: cover;
+    height: 20rem;
+    margin: 0.5rem;
+}
