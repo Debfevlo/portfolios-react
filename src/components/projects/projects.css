@@ -20,6 +20,7 @@
 .projectDescription{
     font-weight: 300;
     font-size: 1rem;
+    max-width:45rem;
 }
 
 .projectImgs{
@@ -35,4 +36,20 @@
     object-fit: cover;
     height: 20rem;
     margin: 0.5rem;
+}
+
+.projectButton{
+    padding: 0.5rem 2.5rem;
+    border: none;
+    border-radius: 2rem;
+    background-color: #fff;
+    font-size: 1rem;
+    margin:3rem 0;
+}
+
+
+@media screen and (max-width:585px){
+    .projectImg{
+        height: 48vw;
+    }
 }

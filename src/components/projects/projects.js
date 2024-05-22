@@ -22,6 +22,8 @@ export default function Project(){
                 <img src={project5} alt='' className='projectImg'/>
                 <img src={project6} alt='' className='projectImg'/>
             </div>
+
+            <button className='projectButton'> See More</button>
         </section>
     )
 }
