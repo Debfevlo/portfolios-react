@@ -1,6 +1,5 @@
 import React from 'react';
 import './Navbar.css';
-import logo from '../../assets/logo.png';
 import contactImg from  '../../assets/contact.png'
 import {Link} from 'react-scroll';
 
@@ -10,13 +9,13 @@ export default function Navbar(){
     return(
         <div>
             <nav className='navbar'>
-                <img src={logo} alt='logo' className='logo'/>
+                <h3>DebbieFevlo</h3>
 
                 <div className='menuBar'>
-                    <Link className='navLinks'>Home</Link>
-                    <Link className='navLinks'>About</Link>
-                    <Link className='navLinks'>Portfolio</Link>
-                    <Link className='navLinks'>Clients</Link>
+                    <Link activeClass='active' to='Body' spy={true} smooth={true} offset={-100} duration={500} className='navLinks'>Home</Link>
+                    <Link activeClass='active' to='skills' spy={true} smooth={true} offset={-100} duration={500} className='navLinks'>About</Link>
+                    <Link activeClass='active' to='projects' spy={true} smooth={true} offset={-100} duration={500} className='navLinks'>Portfolio</Link>
+                    <Link activeClass='active' to='contact' spy={true} smooth={true} offset={-100} duration={500} className='navLinks'>Clients</Link>
                     
                 </div>
 
