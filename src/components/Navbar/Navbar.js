@@ -15,11 +15,13 @@ export default function Navbar(){
                     <Link activeClass='active' to='Body' spy={true} smooth={true} offset={-100} duration={500} className='navLinks'>Home</Link>
                     <Link activeClass='active' to='skills' spy={true} smooth={true} offset={-100} duration={500} className='navLinks'>About</Link>
                     <Link activeClass='active' to='projects' spy={true} smooth={true} offset={-100} duration={500} className='navLinks'>Portfolio</Link>
-                    <Link activeClass='active' to='contact' spy={true} smooth={true} offset={-100} duration={500} className='navLinks'>Clients</Link>
+                    <Link activeClass='active' to='contactPage' spy={true} smooth={true} offset={-100} duration={500} className='navLinks'>Clients</Link>
                     
                 </div>
 
-                <button className='buttonMenu'>
+                <button className='buttonMenu' onClick={() =>{
+                    document.getElementById('contactPage').scrollIntoView()
+                }}>
                 <img src={contactImg} alt='' className='buttonMenuIcon'/> Contact Me
             </button>
 
