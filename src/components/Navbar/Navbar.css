@@ -49,3 +49,11 @@
     margin: 1rem;
 
 }
+
+.active{
+    color:#FFB6C1;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #FFB6C1;
+    
+}
+

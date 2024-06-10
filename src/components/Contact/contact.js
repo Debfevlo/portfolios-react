@@ -25,7 +25,7 @@ export default function Contact(){
                 
             </div>
 
-            <div id='Contact'>
+            <div id='contact'>
                 <h1 className='clientTitle'> Contact Me </h1>
                 <span className='contactDescriiption'> Please fill out the form below to discuss any work opportunities.</span>
                 <form className='contactForm'>
