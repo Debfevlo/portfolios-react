@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import './contact.css';
 import Walmart from '../../assets/walmart.png' ;
 import Microsoft from '../../assets/microsoft.png';
@@ -7,10 +7,30 @@ import Facebook from '../../assets/facebook.png';
 import facebookIcon from '../../assets/facebook-icon.png';
 import tweeterIcon from '../../assets/twitter.png';
 import instagramIcon from '../../assets/instagram.png';
+import emailjs from '@emailjs/browser';
 
 
 
 export default function Contact(){
+    const form = useRef();
+    const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_htw3s2m', 'template_2u662vi', form.current, {
+        publicKey: 'c_cV18103OwzHHZqi',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          e.target.reset();
+          alert('Email Sent');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
     return(
         <section id='contactPage'>
             <div className='client'>
@@ -28,9 +48,9 @@ export default function Contact(){
             <div id='contact'>
                 <h1 className='clientTitle'> Contact Me </h1>
                 <span className='contactDescriiption'> Please fill out the form below to discuss any work opportunities.</span>
-                <form className='contactForm'>
-                    <input type='text' placeholder='Your Name' className='name'/>
-                    <input type='email' placeholder='Your Email' className='email'/>
+                <form className='contactForm' ref={form} onSubmit={sendEmail}>
+                    <input type='text' placeholder='Your Name' name='your_name' className='name'/>
+                    <input type='email' placeholder='Your Email' name='your_email' className='email'/>
                     <textarea name='message' rows='5' placeholder='Type your message' className='msg'></textarea>
                     <button type='submit' value='Send' className='Button'>Submit</button>
                     
